@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: white;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.card {
+  width: 393px;
+  min-height: 852px;
+  background: rgba(0, 12, 54, 1);
+  padding: 28px 34px;
+  text-align: left;
+}
+
+.logo {
+  width: 120px;
+  display: block;
+  margin: 25px auto 8px;
+  justify-content: center;
+}
+
+.title {
+  font-family: Carter One;
+  font-size: 52px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.subtitle {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+input,
+textarea {
+  width: 325px;
+  height: 63px;
+  background: rgba(59, 72, 119, 1);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #d7d9ef;
+}
+
+select {
+  display: none;
+}
+
+.choice-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.choice {
+  background: #50598d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.choice.active {
+  background: #6975c9;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: Merriweather, serif;
+}
+
+.submit-btn {
+  width: 325px;
+  height: 71px;
+  margin-top: 50px;
+  background: #55de8d;
+  color: #07103d;
+  font-size: 28px;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.result {
+  width: 390px;
+  padding: 30px;
+  background: #07103d;
+}
+
+.result h1 {
+  text-align: center;
+  font-family: Merriweather, serif;
+  margin-bottom: 20px;
+  font-size: 38px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0 20px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.45;
+  margin-bottom: 40px;
+}
+
+.next-btn {
+  width: 100%;
+  background: #55de8d;
+  color: #07103d;
+  font-family: Merriweather, serif;
+  font-size: 28px;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+/* RESULT PAGE */
+
+.result-card {
+  width: 360px;
+  margin: 0 auto;
+  background: #08103d;
+  border-radius: 18px;
+  padding: 28px;
+  color: white;
+}
+
+.movie-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.movie-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.why-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.ai-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.next-btn {
+  width: 100%;
+  height: 70px;
+  border: none;
+  border-radius: 10px;
+  background: #56de8b;
+  color: #06153c;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* loading screen */
+.wizard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07103d;
+}
+
+.phone-card.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.phone-card.loading-box .logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Center result page */
+.result-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Safety fix */
+.result-card {
+  margin: auto;
+}
+
+/*Responsive Design */
+
+/* Tablet size*/
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .result-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .movie-title {
+    font-size: 26px;
+  }
+
+  .movie-poster {
+    height: auto;
+    max-height: 350px;
+  }
+
+  .why-title {
+    font-size: 18px;
+  }
+
+  .ai-text,
+  .movie-description {
+    font-size: 15px;
+  }
+
+  .next-btn {
+    font-size: 24px;
+    height: 60px;
+  }
+
+  .phone-card.loading-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1.title {
+    font-size: 36px;
+  }
+
+  /*  Phone size*/
+  @media (max-width: 600px) {
+    .card {
+      width: 92%;
+      padding: 20px;
+    }
+
+    .result-card {
+      width: 92%;
+      padding: 20px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    .submit-btn {
+      width: 100%;
+      font-size: 22px;
+      height: 65px;
+    }
+
+    .movie-title {
+      font-size: 24px;
+    }
+
+    .movie-poster {
+      height: auto;
+      max-height: 380px;
+    }
+
+    .next-btn {
+      font-size: 24px;
+      height: 65px;
+    }
+
+    h1.title {
+      font-size: 38px;
+    }
+
+    .phone-card.loading-box {
+      width: 92%;
+      padding: 20px;
+    }
+  }
+
+  /* Small Phone size*/
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+      padding: 16px;
+    }
+
+    h1.title {
+      font-size: 28px;
+    }
+
+    .submit-btn {
+      font-size: 20px;
+      height: 60px;
+    }
+
+    .movie-title {
+      font-size: 22px;
+    }
+
+    .next-btn {
+      font-size: 20px;
+    }
+  }
+}
